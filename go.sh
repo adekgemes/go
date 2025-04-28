@@ -22,7 +22,7 @@ fi
 
 # Mengambil versi terbaru Go dari situs resmi
 echo "Mengambil versi Go terbaru..."
-LATEST_VERSION=$(curl -s https://go.dev/VERSION?m=text)
+LATEST_VERSION=$(curl -s https://go.dev/VERSION?m=text | head -n 1)
 GO_TARBALL="${LATEST_VERSION}.linux-amd64.tar.gz"
 DOWNLOAD_URL="https://go.dev/dl/${GO_TARBALL}"
 
